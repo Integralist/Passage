@@ -17,8 +17,8 @@ I've got lots to do on this project but a few items I can think of at the moment
 * Look at setting up a database for loading content from
 * Look at setting up a contact form
 * Look into error handling and 404 error pages
-    * Set-up issue with Sinatra over error handling not working
-    * Set-up issue with Sinatra over layout not being applied
+    * Waiting feedback on issue with specified Sinatra layout not being applied
+    * Waiting feedback on issue with Sinatra error handling not working
     * Set-up issue with Sinatra over loading an unknown URL (with slash ending) causing the styles not to load
     (e.g. `/unknown` is fine, but `/unknown/` doesn't load styles?)      
     *Note: This can be fixed by using an absolute path*

@@ -24,6 +24,14 @@ get "/internet-explorer" do
     erb :ie, layout => :layout_ie # not loading properly?
 end
 
+get '/test-error/:a/:b' do |a, b|
+    "#{a.to_i / b.to_i}" # http://127.0.0.1:9393/test-error/10/0 should cause a ZeroDivisionError
+end
+
 not_found do
     erb :notfound
+end
+
+error do
+    "Sorry there was a nasty error - " + env["sinatra.error"].name
 end
