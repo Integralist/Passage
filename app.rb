@@ -21,7 +21,7 @@ get "/projects" do
 end
 
 get "/internet-explorer" do
-    erb :ie, layout => :layout_ie # not loading properly?
+    erb :ie, :layout => :layout_ie
 end
 
 get '/test-error/:a/:b' do |a, b|
