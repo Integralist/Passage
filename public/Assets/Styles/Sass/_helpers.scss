@@ -1,0 +1,70 @@
+/* =============================================================================
+   Helpers
+   These helpers are lot like modules in that they are re-usable layout utilities
+   But modules are different in that they are re-usable design 'patterns'
+   ========================================================================== */
+   
+// ClearFix - http://www.nicolasgallagher.com/micro-clearfix-hack/ + http://jsfiddle.net/necolas/K538S/
+// Apply this class to the element that wraps the floated elements
+.h-clearfix {
+	zoom:1; // IE6/7
+}
+
+.h-clearfix:before,
+.h-clearfix:after {
+	content: "";
+	display: table;
+}
+
+.h-clearfix:after {
+	clear: both;
+}
+
+// Hoz Block (Horizontal) - http://csswizardry.com/2011/09/the-nav-abstraction/
+.h-hoz {
+	list-style: none;
+	padding-left: 0;
+}
+
+.h-hoz,
+.h-hoz dd {
+	margin-left: 0;
+}
+
+.h-hoz li,
+.h-hoz dt,
+.h-hoz dd {
+	display: inline;
+}
+
+.h-hoz a {
+	display: inline-block;
+}
+
+// Image Replacement - http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+.h-hidden {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+/*
+// Alternative Image Replacement (more complicated) - https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7
+.h-hidden {
+	background-color: transparent;
+	border: 0;
+	color: transparent;
+	font: 0/0 a;
+	text-shadow: none;
+}
+*/
+
+// Container Block
+.h-container {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 10px;
+	max-width: 940px;
+	width: 90%;
+}
