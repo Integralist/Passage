@@ -12,10 +12,16 @@ I've got lots to do on this project but a few items I can think of at the moment
 
 * Put together a basic site
 * Enhance it with more dynamic content
+    * Set-up issue with Sinatra over how I load content into layout depending on page
 * Look into possibility of dynamically loading sub content into a .erb file
 * Look at setting up a database for loading content from
 * Look at setting up a contact form
 * Look into error handling and 404 error pages
+    * Set-up issue with Sinatra over error handling not working
+    * Set-up issue with Sinatra over layout not being applied
+    * Set-up issue with Sinatra over loading an unknown URL (with slash ending) causing the styles not to load
+    (e.g. `/unknown` is fine, but `/unknown/` doesn't load styles?)      
+    *Note: This can be fixed by using an absolute path*
 * Look at building XML site map automatically
 * Write a blog post on all my findings
 
