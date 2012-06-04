@@ -16,6 +16,7 @@ I've got lots to do on this project but a few items I can think of at the moment
 * Look at setting up a database for loading content from
 * Look at setting up a contact form
 * Look into error handling and 404 error pages
+* Look at building XML site map automatically
 * Write a blog post on all my findings
 
 ...this is all basic stuff, but I haven't got time for at the moment.
