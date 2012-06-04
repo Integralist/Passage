@@ -33,5 +33,5 @@ not_found do
 end
 
 error do
-    "Sorry there was a nasty error - " + env["sinatra.error"].name
+    "Sorry there was a nasty error <b style=\"color:red;\">#{env["sinatra.error"]}</b>"
 end
