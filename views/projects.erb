@@ -1,1 +1,9 @@
-<p>Projects</p>
+<p>Projects (demonstration of using session: you started visiting this site at <strong><%= session[:time] %></strong></p>
+<p>The following is an example of some request details:</p>
+<ul>
+    <li><%= request.path_info %></li>
+    <li><%= request.fullpath %></li>
+    <li><%= request.url %></li>
+</ul>
+<p>The full request object can be seen as follows:</p>
+<%= request.inspect %>

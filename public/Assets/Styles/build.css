@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "US-ASCII";
 /* normalize.css 2012-01-17T16:33 UTC - http://github.com/necolas/normalize.css */
 /* =============================================================================
    HTML5 display definitions
@@ -535,10 +535,6 @@ table {
 	.l-inline
 	.l-flipped
  */
-.l-container {
-  position: relative;
-}
-
 /* =============================================================================
    Modules
    These are the reusable, modular parts of our design.
@@ -633,15 +629,8 @@ table {
   width: 20%;
 }
 
-.m-forkme {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-h2 {
-  border: 1px solid #999999;
-  border-width: 0 0 1px 0;
+.error {
+  color: #b22727;
 }
 
 /* =============================================================================

@@ -15,12 +15,6 @@
 @import "Modules/media";
 @import "Modules/matrix";
 
-.m-forkme {
-	position: absolute;
-	right: 0;
-	top: 0;
-}
-
-h2 {
-	@include borders(1px, #999, "b");
+.error {
+    color: $alert-color;
 }
