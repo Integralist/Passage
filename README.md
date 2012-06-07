@@ -43,5 +43,6 @@ gem 'sinatra'
 ```
 
 * Open CLI and enter:
+	* Commit your files using Git (sorry not going into how to use Git here!)
 	* `git push heroku master`
 	* `heroku open` will open your default browser to the relevant URL (e.g. http://evening-warrior-9288.herokuapp.com/)
