@@ -10,7 +10,7 @@
 	by using require_relative "test2.rb", which requires files relative to the directory of the file.
 =end
 require 'sinatra'
-require './email'
+# require './email'
 
 # We set the cache control for static resources to approximately 1 month
 set :static_cache_control, [:public, :max_age => 2678400]
