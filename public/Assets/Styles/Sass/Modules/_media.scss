@@ -1,0 +1,28 @@
+// Media Block - http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+
+/*
+<div class="m-media" style="border:1px solid blue;">
+	<a href="http://twitter.com/stubbornella" class="m-media-img">
+		<img src="Assets/Images/forkme.png" alt="me" />
+	</a>
+	<div class="m-media-body">
+		<p>This is a media object</p>
+		<p>Concept from Stubbornella</p>
+		<p>Might need a min-height set depending on your requirements</p>
+	</div>
+</div>
+*/
+ 
+.m-media {
+	display: block;
+}
+
+.m-media-img {
+	float: left;
+	margin-right: 10px;
+}
+
+.m-media-body {
+	overflow: hidden;
+	margin-bottom: 0;
+}

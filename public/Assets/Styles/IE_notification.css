@@ -1,0 +1,50 @@
+/*
+	Author		: Mark McDonnell
+	Document	: IE_notification
+	Created on	: 20-08-2011
+	Description	: Displays a warning message to Internet Explorer 7- users
+*/
+
+body, html { 
+	height: 100%; 
+	overflow: hidden; 
+}
+
+#ie-container {
+	background-color: #000; 
+	filter: alpha(opacity=70);
+	height: 100%; 
+	left: 0; 
+	position: absolute; 
+	top: 0; 
+	width: 100%; 
+	z-index: 1000;
+}
+
+#ie-message {
+	height: 144px;
+	left: 50%;
+	margin: 0 0 0 -272px;
+	position: relative; 
+	top: 40%;
+	width: 545px;
+	z-index: 1000;
+}
+
+#ie-message span {
+	font-size: 120%;
+	left: 0px;
+	position: absolute;
+	text-align: center;
+	top: 63px;
+	width: 545px;
+}
+
+#ie-message a {
+	color: #fff;
+	text-decoration: none;
+}
+
+select { 
+	display: none; 
+}

@@ -1,0 +1,42 @@
+/* =============================================================================
+   Mixins
+   These components help extend rules with specific functionality to reduce code
+   ========================================================================== */
+
+@mixin borders ($width, $colour, $settings: '') {
+	border: $width solid $colour;
+
+	@if $settings == 't' {
+		border-width: $width 0 0;
+	} @else if $settings == 'r' {
+		border-width: 0 $width 0 0;
+	} @else if $settings == 'b' {
+		border-width: 0 0 $width 0;
+	} @else if $settings == 'l' {
+		border-width: 0 0 0 $width;
+	} @else if $settings == 'tr' {
+		border-width: $width $width 0 0;
+	} @else if $settings == 'tb' {
+		border-width: $width 0 $width 0;
+	} @else if $settings == 'tl' {
+		border-width: $width 0 0 $width;
+	} @else if $settings == 'rt' {
+		border-width: $width $width 0 0;
+	} @else if $settings == 'rb' {
+		border-width: 0 $width $width 0;
+	} @else if $settings == 'rl' {
+		border-width: 0 $width;
+	} @else if $settings == 'bt' {
+		border-width: $width 0;
+	} @else if $settings == 'br' {
+		border-width: 0 $width $width 0;
+	} @else if $settings == 'bl' {
+		border-width: 0 0 $width $width;
+	} @else if $settings == 'lt' {
+		border-width: $width 0 0 $width;
+	} @else if $settings == 'lr' {
+		border-width: 0 $width;
+	} @else if $settings == 'lb' {
+		border-width: 0 0 $width $width;
+	}
+}
