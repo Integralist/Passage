@@ -1,8 +1,22 @@
 #!/usr/bin/env ruby
 
+=begin
+	You'll see that when loading a local file (email.rb) we need to fix problems with the path.
+	The answer from Stack Overflow (http://stackoverflow.com/questions/10945114/ruby-require-call-fails-on-custom-code) was as follows...
+	
+	The current directory (relative to the main ruby file) is not part of the load paths (the set of paths that require looks in). 
+	So you either need to add it to the load path (best done by invoking ruby as ruby -I. test1.rb), 
+	by using require "./test2.rb" or 
+	by using require_relative "test2.rb", which requires files relative to the directory of the file.
+=end
 require 'sinatra'
+require './email'
 
+# We set the cache control for static resources to approximately 1 month
 set :static_cache_control, [:public, :max_age => 2678400]
+
+# We specify which server we want to use (Thin is tried first and then failing that WEBrick)
+set :server, %w[thin webrick]
 
 =begin
 	Below we're enabling sessions so we can pass data around.
@@ -84,6 +98,25 @@ end
 
 get '/projects' do
     erb :projects
+end
+
+get '/contact' do
+	erb :contact
+end
+
+post '/contact' do
+	# We redirect the user back to the home page if they don't enter the name "Mark"
+    redirect "/contact-error/name" if params[:user].empty?
+    redirect "/contact-error/email" if params[:email].empty?
+    redirect "/contact-error/message" if params[:message].empty?
+    
+    # Notice when receiving post data from a form field we need to use the "Named Parameter" rather than "Block Parameters"
+    erb :contact_success
+end
+
+get '/contact-error/:field' do |field|
+	@field = field
+	erb :contact_error
 end
 
 get '/internet-explorer' do
