@@ -10,7 +10,7 @@
 	by using require_relative "test2.rb", which requires files relative to the directory of the file.
 =end
 require 'sinatra'
-#require './email'
+require './email'
 
 # We set the cache control for static resources to approximately 1 month
 set :static_cache_control, [:public, :max_age => 2678400]
@@ -111,7 +111,7 @@ post '/contact' do
     redirect "/contact-error/message" if params[:message].empty?
     
     # to, from, subject, body
-    #Email.new(params[:email], 'mark@stormcreative.co.uk', 'test subject', params[:message]);
+    Email.new('mark.mcdx@gmail.com', params[:email], 'test subject', params[:message]);
 
     # Notice when receiving post data from a form field we need to use the "Named Parameter" rather than "Block Parameters"
     erb :contact_success
