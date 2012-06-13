@@ -112,7 +112,7 @@ post '/contact' do
     
     # to, from, subject, body
     email = Email.new('mark.mcdx@gmail.com', params[:email], 'test subject', params[:message]);
-    email.send_mail
+    email.send_email
 
     # Notice when receiving post data from a form field we need to use the "Named Parameter" rather than "Block Parameters"
     erb :contact_success
