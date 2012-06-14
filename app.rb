@@ -10,6 +10,7 @@
 	by using require_relative "test2.rb", which requires files relative to the directory of the file.
 =end
 require 'sinatra'
+require 'zlib'
 require './email'
 
 # We set the cache control for static resources to approximately 1 month
@@ -93,6 +94,11 @@ end
 
 get '/' do
     session[:time] = Time.now
+    z = Zlib::Deflate.new(6, 31)
+    z.deflate(File.read('public/Assets/Styles/build.css'))
+    z.flush
+    z.finish
+    z.close
     erb :home
 end
 
