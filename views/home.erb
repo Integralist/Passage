@@ -1,4 +1,41 @@
-<p>Content from ERB template</p>
-<%= erb :partial_home %>
-<p>Escape dangerous content: <%= xss "<script>alert('XSS!')</script>" %> - using `Rack::Utils`</p>
+<div class="container demo">
+    <h1>Passage</h1>
+    <h2>A Ruby/Sinatra Starter Application</h2>
+    <h3>Object-Oriented CSS</h3>
+    <p>This application utilises <a href="http://sass-lang.com/">Sass</a> (a CSS pre-processor) and the <abbr title="Object-Oriented CSS">OOCSS</abbr> methodology to help style and layout complicated web applications much more easily.</p>
+    <h3>Modular JavaScript</h3>
+    <p>At the bottom of this page you'll see some YouTube videos displayed on the page - this is happening via JavaScript (with the help of <a href="https://github.com/swfobject/swfobject">SWFObject</a>).</p>
+    <p>If you check the developer tools built into your browser you'll also see we're utilising some other JavaScript features such as:</p>
+    <ul>
+        <li>RequireJs (AMD loader)</li>
+        <li>AJAX (dynamic loading of data without causing page refresh)</li>
+        <li>Templating (via <a href="http://twitter.github.com/hogan.js/">Hogan.js</a>)</li>
+        <li>Loading a Twitter feed asynchronously</li>
+    </ul>
+    <h3>Built to be modular</h3>
+    <p>This page's content is actually loaded from an <abbr title="Embedded Ruby">ERB</abbr> template file.</p>
+    <p>Templates are a great way to keep a separation of code and design (back-end and front-end)</p>
+    <%= erb :partial_home %>
+    <h3>Performance conscious from the get-go!</h3>
+    <p>I'm a front-end engineer so performance of my applications is critical. So setting up a Ruby web application meant that I wanted to ensure as part of the standard build I had all my usual performance considerations accounted for, such as:</p>
+    <ul>
+        <li>Gzip'ing of all static content (HTML, JavaScript, CSS and which results in ~70% decrease in file size!)</li>
+        <li>Using the fastest web server possible (currently <a href="http://code.macournoyer.com/thin/">Thin</a>)</li>
+        <li>Caching static resources (I set one month cache expiration but you could set a LOT longer depending on your requirements)</li>
+        <li>Build script for my JavaScript/CSS (minifies and concatenates using <a href="https://github.com/mishoo/UglifyJS">UglifyJs</a>)</li>
+    </ul>
+    <h3>Mobile First Approach</h3>
+    <p>Built on the principle of loading stylesheets for the specific dimensions of the user's device.</p>
+    <p>We have three device dimensions we target:</p>
+    <ol>
+        <li>Mobile</li>
+        <li>Tablet</li>
+        <li>Desktop</li>
+    </ol>
+    <p>Internet Explorer browsers (less than version 9) just get the desktop variation.</p>
+    <h3>Useful utilities pre-packaged</h3>
+    <p>I just want to quickly demonstrate how we're using the <code>Rack::Utils</code> `escape` method to protect us from dangerous content.</p>
+    <p>Let's imagine we're accepting user input and they try to execute an <abbr title="Cross-Site Scripting">XSS</abbr> attack by inserting some JavaScript code which displays the message "XSS!" in an `alert` dialog.</p>
+    <p>We'll `escape` the content so it becomes: <code><%= xss "<script>alert('XSS!')</script>" %></code></p>
+</div>
 <script data-main="Assets/Scripts/App/main" src="Assets/Scripts/require.js"></script>

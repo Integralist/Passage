@@ -1,7 +1,7 @@
 <!doctype html>
-<!-- Explanation: http://www.phpied.com/conditional-comments-block-downloads/ -->
-<!--[if IE]><![endif]-->
-<html dir="ltr" lang="en">
+<!--[if IE 8]><html class="ie8" dir="ltr" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" dir="ltr" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--> <html dir="ltr" lang="en"> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
 		<meta name="author" content="" />
@@ -24,12 +24,11 @@
 		<script src="/Assets/Scripts/Utils/Elements/html5.js"></script>
 		<![endif]-->
 		<link rel="author" href="/humans.txt" type="text/plain">
-    	<link rel="stylesheet" href="/Assets/Styles/build.css" />
-    	<!--[if IE 8]>
-    	<link rel="stylesheet" href="/Assets/Styles/IE8.css" />
-    	<![endif]-->
-    	<!--[if IE 7]>
-    	<link rel="stylesheet" href="/Assets/Styles/IE7.css" />
+    	<link rel="stylesheet" href="Assets/Styles/mobile.css"  media="only screen and (min-width: 320px)">
+        <link rel="stylesheet" href="Assets/Styles/tablet.css"  media="only screen and (min-width: 480px) and (max-width: 959px)">
+        <link rel="stylesheet" href="Assets/Styles/desktop.css" media="only screen and (min-width: 960px)">
+    	<!--[if (lt IE 9) & (!IEMobile)]>
+    	<link rel="stylesheet" href="/Assets/Styles/desktop.css">
     	<![endif]-->
 	</head>
 	<body>

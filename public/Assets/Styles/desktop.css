@@ -1,0 +1,1000 @@
+/* normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ * Remove excess height in iOS5 devices
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+[hidden] {
+  display: none;
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+body {
+  margin: 0;
+}
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+b,
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  margin: 1em 40px;
+}
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+p,
+pre {
+  margin: 1em 0;
+}
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+/* 1 */
+q {
+  quotes: none;
+}
+
+/* 2 */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+small {
+  font-size: 75%;
+}
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+dd {
+  margin: 0 0 0 40px;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/*
+ * Corrects list images handled incorrectly in IE7
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+figure {
+  margin: 0;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+form {
+  margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects text not wrapping in FF3
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+button,
+input {
+  line-height: normal;
+  /* 1 */
+}
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  /* 1 */
+  -webkit-appearance: button;
+  /* 2 */
+  *overflow: visible;
+  /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ * 3. Removes excess padding in IE7
+      Known issue: excess padding remains in IE6
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
+ */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =============================================================================
+   Additions
+   The Base settings are mainly from @necolas's Normalize.css style sheet
+   But I've enhanced & amended some of the settings to suit my own requirements
+   ========================================================================== */
+/*
+ * http://paulirish.com/2012/box-sizing-border-box-ftw/
+ * Apply a natural box layout model to all elements
+ */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+}
+
+/* 
+ * Addresses consistent display across browsers
+ */
+hr {
+  background-color: #ccc;
+  border: 0;
+  color: #ccc;
+  height: 1px;
+}
+
+/* 
+ * Avoids 3px bottom margin
+ */
+img {
+  display: block;
+}
+
+/* 
+ * Make the table render more quickly by setting its layout to be fixed.
+ * e.g. if the first row of cells has a width set then the browser now wont bother re-calculating the widths for every other row
+ */
+table {
+  table-layout: fixed;
+}
+
+/* =============================================================================
+   Theme
+   These are base level rules, but which are specific to the current project
+   ========================================================================== */
+body {
+  margin: 1em;
+}
+
+/*
+ * Bootstrap v2.0.4
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+}
+
+.row:after {
+  clear: both;
+}
+
+[class*="span"] {
+  float: left;
+  margin-left: 20px;
+}
+
+.container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 940px;
+}
+
+.span12 {
+  width: 940px;
+}
+
+.span11 {
+  width: 860px;
+}
+
+.span10 {
+  width: 780px;
+}
+
+.span9 {
+  width: 700px;
+}
+
+.span8 {
+  width: 620px;
+}
+
+.span7 {
+  width: 540px;
+}
+
+.span6 {
+  width: 460px;
+}
+
+.span5 {
+  width: 380px;
+}
+
+.span4 {
+  width: 300px;
+}
+
+.span3 {
+  width: 220px;
+}
+
+.span2 {
+  width: 140px;
+}
+
+.span1 {
+  width: 60px;
+}
+
+.offset12 {
+  margin-left: 980px;
+}
+
+.offset11 {
+  margin-left: 900px;
+}
+
+.offset10 {
+  margin-left: 820px;
+}
+
+.offset9 {
+  margin-left: 740px;
+}
+
+.offset8 {
+  margin-left: 660px;
+}
+
+.offset7 {
+  margin-left: 580px;
+}
+
+.offset6 {
+  margin-left: 500px;
+}
+
+.offset5 {
+  margin-left: 420px;
+}
+
+.offset4 {
+  margin-left: 340px;
+}
+
+.offset3 {
+  margin-left: 260px;
+}
+
+.offset2 {
+  margin-left: 180px;
+}
+
+.offset1 {
+  margin-left: 100px;
+}
+
+.row-fluid {
+  width: 100%;
+  *zoom: 1;
+}
+
+.row-fluid:before,
+.row-fluid:after {
+  display: table;
+  content: "";
+}
+
+.row-fluid:after {
+  clear: both;
+}
+
+.row-fluid [class*="span"] {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  margin-left: 2.127659574%;
+  *margin-left: 2.0744680846382977%;
+}
+
+.row-fluid [class*="span"]:first-child {
+  margin-left: 0;
+}
+
+.row-fluid .span12 {
+  width: 99.99999998999999%;
+  *width: 99.94680850063828%;
+}
+
+.row-fluid .span11 {
+  width: 91.489361693%;
+  *width: 91.4361702036383%;
+}
+
+.row-fluid .span10 {
+  width: 82.97872339599999%;
+  *width: 82.92553190663828%;
+}
+
+.row-fluid .span9 {
+  width: 74.468085099%;
+  *width: 74.4148936096383%;
+}
+
+.row-fluid .span8 {
+  width: 65.95744680199999%;
+  *width: 65.90425531263828%;
+}
+
+.row-fluid .span7 {
+  width: 57.446808505%;
+  *width: 57.3936170156383%;
+}
+
+.row-fluid .span6 {
+  width: 48.93617020799999%;
+  *width: 48.88297871863829%;
+}
+
+.row-fluid .span5 {
+  width: 40.425531911%;
+  *width: 40.3723404216383%;
+}
+
+.row-fluid .span4 {
+  width: 31.914893614%;
+  *width: 31.8617021246383%;
+}
+
+.row-fluid .span3 {
+  width: 23.404255317%;
+  *width: 23.3510638276383%;
+}
+
+.row-fluid .span2 {
+  width: 14.89361702%;
+  *width: 14.8404255306383%;
+}
+
+.row-fluid .span1 {
+  width: 6.382978723%;
+  *width: 6.329787233638298%;
+}
+
+.container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+  max-width: 940px;
+  width: 90%;
+}
+
+/* 
+   Document   : Slimbox
+   Created on : 25-Mar-2009, 12:48:32
+   Author     : digitalia.be
+   Description: Required to apply the 'lightbox' styles to the gallery popup images
+*/
+#lbOverlay {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  cursor: pointer;
+}
+
+#lbCenter, #lbBottomContainer {
+  position: absolute;
+  z-index: 9999;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.lbLoading {
+  background: white url(../Images/Slimbox/loading.gif) no-repeat center;
+}
+
+#lbImage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 10px solid #fff;
+  background-repeat: no-repeat;
+}
+
+#lbPrevLink, #lbNextLink {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  outline: none;
+}
+
+#lbPrevLink {
+  left: 0;
+}
+
+#lbPrevLink:hover {
+  background: transparent url(../Images/Slimbox/prevlabel.gif) no-repeat 0 15%;
+}
+
+#lbNextLink {
+  right: 0;
+}
+
+#lbNextLink:hover {
+  background: transparent url(../Images/Slimbox/nextlabel.gif) no-repeat 100% 15%;
+}
+
+#lbBottom {
+  font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #666;
+  line-height: 1.4em;
+  text-align: left;
+  border: 10px solid #fff;
+  border-top-style: none;
+}
+
+#lbCloseLink {
+  display: block;
+  float: right;
+  width: 66px;
+  height: 22px;
+  background: transparent url(../Images/Slimbox/closelabel.gif) no-repeat center;
+  margin: 5px 0;
+  outline: none;
+}
+
+#lbCaption, #lbNumber {
+  margin-right: 71px;
+}
+
+#lbCaption {
+  font-weight: 700;
+}
+
+.btn {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid #666;
+}
+
+/*
+<div class="media" style="border:1px solid blue;">
+	<a href="http://twitter.com/stubbornella" class="media-img">
+		<img src="Assets/Images/forkme.png" alt="me" />
+	</a>
+	<div class="media-body">
+		<p>This is a media object</p>
+		<p>Concept from Stubbornella</p>
+		<p>Might need a min-height set depending on your requirements</p>
+	</div>
+</div>
+*/
+.media {
+  display: block;
+}
+
+.media-img {
+  float: left;
+  margin-right: 10px;
+}
+
+.media-body {
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.hidetxt {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*
+    /* Alternative Image Replacement (more complicated) */
+    /* https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7 */
+    
+    .hidetxt {
+    	background-color: transparent;
+    	border: 0;
+    	color: transparent;
+    	font: 0/0 a;
+    	text-shadow: none;
+    }
+*/
+.hz {
+  list-style: none;
+  padding-left: 0;
+}
+
+.hz,
+.hz dd {
+  margin-left: 0;
+}
+
+.hz li,
+.hz dt,
+.hz dd {
+  display: inline;
+}
+
+.hz a {
+  display: inline-block;
+}
+
+.push {
+  margin: 1em;
+}
+
+.pushtop {
+  margin-top: 1em;
+}
+
+.pushright {
+  margin-right: 1em;
+}
+
+.pushbottom {
+  margin-bottom: 1em;
+}
+
+.pushleft {
+  margin-left: 1em;
+}
+
+.pushzero {
+  margin: 0;
+}
+
+/* =============================================================================
+   Error page
+   ========================================================================== */
+.error {
+  color: #b22727;
+}
+
+/* =============================================================================
+   Home page demo
+   ========================================================================== */
+.demo {
+  margin-bottom: 2em;
+}
+.demo h1 {
+  border: 1px solid #b22727;
+  border-width: 0 0 1px 0;
+  color: #b22727;
+}
+.demo h2 {
+  border: 1px solid #cccc00;
+  border-width: 0 0 1px 0;
+  color: #cccc00;
+}
+.demo h3 {
+  border: 1px solid #9fcb8c;
+  border-width: 0 0 1px 0;
+  color: #67a54b;
+}

@@ -40,7 +40,7 @@ disable :show_exceptions
 
 helpers do
     include Rack::Utils
-    alias_method :xss, :escape # we alias "xss" as a function so it actual uses escape()
+    alias_method :xss, :escape # we alias "xss" as a function so it actually uses escape()
 end
 
 =begin
@@ -106,14 +106,14 @@ get '/contact' do
 end
 
 post '/contact' do
-	# We redirect the user back to the home page if they don't enter the name "Mark"
+	# We redirect the user if the field names are incorrect
     redirect "/contact-error/name" if params[:user].empty?
     redirect "/contact-error/email" if params[:email].empty?
     redirect "/contact-error/message" if params[:message].empty?
     
     # to, from, subject, body
-    email = Email.new('mark.mcdx@gmail.com', params[:email], 'test subject', params[:message]);
-    email.send_email
+    #email = Email.new('mark.mcdx@gmail.com', params[:email], 'test subject', params[:message]);
+    #email.send_email
 
     # Notice when receiving post data from a form field we need to use the "Named Parameter" rather than "Block Parameters"
     erb :contact_success
