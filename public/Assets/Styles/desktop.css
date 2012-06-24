@@ -1001,4 +1001,8 @@ body {
 
 body {
   background-color: blue;
+  color: white;
+}
+body a {
+  color: yellow;
 }

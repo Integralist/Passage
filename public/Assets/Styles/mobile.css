@@ -1002,7 +1002,10 @@ body {
 body {
   background-color: green;
 }
+body a {
+  color: white;
+}
 
 .container {
-  max-width: 280px;
+  max-width: 100%;
 }

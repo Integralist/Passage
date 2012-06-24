@@ -5,8 +5,12 @@
 
 body {
     background-color: green;
+    
+    a {
+        color: white;
+    }
 }
 
 .container {
-	max-width: 280px;
+	max-width: 100%;
 }
