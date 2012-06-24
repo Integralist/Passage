@@ -1,0 +1,8 @@
+/* =============================================================================
+   The main stylesheet is loaded for all browsers (including IE)
+   But because IE < 9 doesn't understand the media queries we're using to target 
+   specific devices and so we use conditional comments to load this stylesheet 
+   specifically for IE < 9, and we simply import the desktop styles.
+   ========================================================================== */
+   
+@import "Queries/960-home";

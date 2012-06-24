@@ -1,0 +1,44 @@
+/* =============================================================================
+   Additions
+   The Base settings are mainly from @necolas's Normalize.css style sheet
+   But I've enhanced & amended some of the settings to suit my own requirements
+   ========================================================================== */
+
+/*
+ * http://paulirish.com/2012/box-sizing-border-box-ftw/
+ * Apply a natural box layout model to all elements
+ */
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+}
+
+/* 
+ * Addresses consistent display across browsers
+ */
+hr { 
+	background-color: #ccc; 
+	border: 0; 
+	color: #ccc; 
+	height: 1px; 
+}
+
+/* 
+ * Avoids 3px bottom margin
+ */
+img {
+    display: block;
+}
+
+/* 
+ * Make the table render more quickly by setting its layout to be fixed.
+ * e.g. if the first row of cells has a width set then the browser now wont bother re-calculating the widths for every other row
+ */
+table {
+    table-layout: fixed;
+}

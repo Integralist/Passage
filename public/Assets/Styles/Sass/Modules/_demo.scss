@@ -1,0 +1,22 @@
+/* =============================================================================
+   Home page demo
+   ========================================================================== */
+
+.demo {
+    margin-bottom: 2em;
+    
+    h1 {
+        @include border(1px, $alert-color, 'b');
+        color: $alert-color;
+    }
+    
+    h2 {
+        @include border(1px, $brand-color, 'b');
+        color: $brand-color;
+    } 
+    
+    h3 {
+        @include border(1px, lighten($action-color, 20%), 'b');
+        color: $action-color;
+    }
+}

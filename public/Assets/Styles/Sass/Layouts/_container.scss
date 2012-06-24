@@ -1,0 +1,11 @@
+// Container Block
+// This is normally what we stick the main website content within
+
+.container {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 10px;
+	max-width: $site-max-width;
+	width: 90%;
+}

@@ -998,3 +998,7 @@ body {
   border-width: 0 0 1px 0;
   color: #67a54b;
 }
+
+body {
+  background-color: blue;
+}

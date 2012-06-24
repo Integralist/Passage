@@ -15,7 +15,7 @@ class Email
 		@body = body
 		@message = <<MESSAGE_CONTENT
 			From: User <#{@from}>
-		    To: Mark McDonnell <#{@to}>
+		    To: Your Name <#{@to}>
 		    MIME-Version: 1.0
 		    Content-type: text/html
 		    Subject: #{@subject}
@@ -27,7 +27,7 @@ MESSAGE_CONTENT
 	
 	def send_email
 		@smtp.enable_starttls
-		@smtp.start('furious-wind-9309.herokuapp.com', ENV['GM_USR'], ENV['GM_PSW'], :login) do |smtp|
+		@smtp.start('yourdomain.com', ENV['GM_USR'], ENV['GM_PSW'], :login) do |smtp|
 			@smtp.send_message(@message, @from, @to)
 		end
 	end

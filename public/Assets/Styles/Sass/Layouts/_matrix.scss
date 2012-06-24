@@ -1,0 +1,44 @@
+// Matrix object via @csswizardry - http://jsfiddle.net/csswizardry/CjHkG/
+
+.matrix,
+.matrix > li,
+.matrix > div {
+	border: 1px solid #666;
+}
+
+.matrix {
+	border-width: 1px 0 0 1px; /* top & left */
+	list-style: none;
+	margin-left: 0;
+	overflow: hidden; /* clear floats */
+	padding-left: 0;
+}
+
+.matrix > li,
+.matrix > div {
+	float:left;
+	border-width: 0 1px 1px 0; /* right & bottom */
+	padding: 1em;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+/* Columns */
+
+.two-col > li,
+.two-col > div {
+	width: 50%;
+}
+.three-col > li,
+.three-col > div {
+	width: 33.333%;
+}
+.four-col > li,
+.four-col > div {
+	width: 25%;
+}
+.five-col > li,
+.five-col > div {
+	width: 20%;
+}

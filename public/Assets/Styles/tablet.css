@@ -999,6 +999,10 @@ body {
   color: #67a54b;
 }
 
+body {
+  background-color: yellow;
+}
+
 .container {
   max-width: 440px;
 }

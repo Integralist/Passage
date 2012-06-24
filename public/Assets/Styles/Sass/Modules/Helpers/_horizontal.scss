@@ -1,0 +1,22 @@
+// Horizontal Block
+// http://csswizardry.com/2011/09/the-nav-abstraction/
+
+.hz {
+	list-style: none;
+	padding-left: 0;
+}
+
+.hz,
+.hz dd {
+	margin-left: 0;
+}
+
+.hz li,
+.hz dt,
+.hz dd {
+	display: inline;
+}
+
+.hz a {
+	display: inline-block;
+}

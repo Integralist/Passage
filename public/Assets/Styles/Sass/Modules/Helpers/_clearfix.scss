@@ -1,0 +1,18 @@
+// ClearFix
+// http://www.nicolasgallagher.com/micro-clearfix-hack/
+// http://jsfiddle.net/necolas/K538S/
+// Apply this class to the element that wraps the floated elements
+
+.clearfix {
+	zoom:1; // IE6/7
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}

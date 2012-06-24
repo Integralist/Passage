@@ -1,0 +1,8 @@
+.btn {
+	$border-radius: 20px;
+	@each $prefix in $prefixes {
+        #{$prefix}-border-radius: $border-radius;
+    }
+    border-radius: $border-radius;
+    border: 1px solid #666;
+}

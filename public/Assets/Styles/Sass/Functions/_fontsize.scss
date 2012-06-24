@@ -1,0 +1,3 @@
+@function font-sizing ($target) {
+    @return ($target / $base-font-size) * 1em; // Had to multiply by one to stop a space between the sum and type.
+}

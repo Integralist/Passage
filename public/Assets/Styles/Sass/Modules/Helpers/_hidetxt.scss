@@ -1,0 +1,21 @@
+// Image Replacement
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+
+.hidetxt {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+/*
+    // Alternative Image Replacement (more complicated)
+    // https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7
+    
+    .hidetxt {
+    	background-color: transparent;
+    	border: 0;
+    	color: transparent;
+    	font: 0/0 a;
+    	text-shadow: none;
+    }
+*/
