@@ -10,6 +10,7 @@
 	by using require_relative "test2.rb", which requires files relative to the directory of the file.
 =end
 require 'sinatra'
+require 'redcarpet'
 require './email'
 use Rack::Deflater # GZIP all content (HTML, CSS, JavaScript)
 
@@ -136,6 +137,13 @@ end
 
 get '/test-error/:a/:b' do |a, b|
     "#{a.to_i / b.to_i}" # http://127.0.0.1:9393/test-error/10/0 should cause a ZeroDivisionError
+end
+
+get '/my-article' do
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :fenced_code_blocks => true)
+    file = File.read('./public/Assets/Markdown/My Article Content.md')
+    @converted = markdown.render(file)
+    erb :article
 end
 
 not_found do
