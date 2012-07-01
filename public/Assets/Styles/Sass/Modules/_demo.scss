@@ -2,6 +2,27 @@
    Home page demo
    ========================================================================== */
 
+.topright {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.forkme {
+    @extend .topright;
+    
+    text-indent: -999em;
+    
+    &:before {
+        @extend .topright;
+        
+        background: url(../Images/forkme.png) 0 0 no-repeat;
+        content: '';
+        height: 149px;
+        width: 149px;
+    }
+}
+
 .demo {
     margin-bottom: 2em;
     
