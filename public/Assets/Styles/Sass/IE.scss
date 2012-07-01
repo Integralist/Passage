@@ -4,5 +4,14 @@
    specific devices and so we use conditional comments to load this stylesheet 
    specifically for IE < 9, and we simply import the desktop styles.
    ========================================================================== */
-   
+
+// Configurations/Settings
+@import "Configurations/variables";
+
+// Modules
+    
+    // Mixins
+    @import "Modules/Mixins/border";
+
+// Internet Explorer < 9 gets desktop styles
 @import "Queries/960-home";

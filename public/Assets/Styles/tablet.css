@@ -1000,7 +1000,13 @@ body {
 }
 
 body {
-  background-color: yellow;
+  background-color: #f5fb9d;
+}
+body .demo {
+  color: black;
+}
+body a {
+  color: blue;
 }
 
 .container {

@@ -1,74 +1,45 @@
-/*
-Syntax error: Undefined variable: "$alert-color".
-        on line 6 of /Users/markmcdonnell/Dropbox/Library/Ruby/Passage/public/Assets/Styles/Sass/Modules/_error.scss
-        from line 1 of public/Assets/Styles/Sass/Queries/_960-home.scss
-        from line 8 of public/Assets/Styles/Sass/IE.scss
+/* =============================================================================
+   The main stylesheet is loaded for all browsers (including IE)
+   But because IE < 9 doesn't understand the media queries we're using to target 
+   specific devices and so we use conditional comments to load this stylesheet 
+   specifically for IE < 9, and we simply import the desktop styles.
+   ========================================================================== */
+/* =============================================================================
+   Error page
+   ========================================================================== */
+.error {
+  color: #b22727;
+}
 
-1: /* =============================================================================
-2:    The main stylesheet is loaded for all browsers (including IE)
-3:    But because IE < 9 doesn't understand the media queries we're using to target 
-4:    specific devices and so we use conditional comments to load this stylesheet 
-5:    specifically for IE < 9, and we simply import the desktop styles.
-6:    ========================================================================== */
-7:    
-8: @import "Queries/960-home";
+/* =============================================================================
+   Home page demo
+   ========================================================================== */
+.demo {
+  margin-bottom: 2em;
+}
+.demo h1 {
+  border: 1px solid #b22727;
+  border-width: 0 0 1px 0;
+  color: #b22727;
+}
+.demo h2 {
+  border: 1px solid #cccc00;
+  border-width: 0 0 1px 0;
+  color: #cccc00;
+}
+.demo h3 {
+  border: 1px solid #9fcb8c;
+  border-width: 0 0 1px 0;
+  color: #67a54b;
+}
 
-Backtrace:
-/Users/markmcdonnell/Dropbox/Library/Ruby/Passage/public/Assets/Styles/Sass/Modules/_error.scss:6
-public/Assets/Styles/Sass/Queries/_960-home.scss:1
-public/Assets/Styles/Sass/IE.scss:8
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/script/variable.rb:49:in `_perform'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/script/node.rb:40:in `perform'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:216:in `visit_prop'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:18:in `visit'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:238:in `visit_rule'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:18:in `visit'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:146:in `block in visit_import'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:146:in `map'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:146:in `visit_import'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:18:in `visit'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:146:in `block in visit_import'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:146:in `map'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:146:in `visit_import'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:18:in `visit'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:47:in `visit_root'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:18:in `visit'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/tree/root_node.rb:20:in `render'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/engine.rb:299:in `_render'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/engine.rb:246:in `render'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/plugin/compiler.rb:340:in `update_stylesheet'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/plugin/compiler.rb:202:in `block in update_stylesheets'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/plugin/compiler.rb:200:in `each'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/plugin/compiler.rb:200:in `update_stylesheets'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/lib/sass/plugin/compiler.rb:298:in `block in watch'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/vendor/listen/lib/listen/multi_listener.rb:86:in `call'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/vendor/listen/lib/listen/multi_listener.rb:86:in `on_change'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/vendor/listen/lib/listen/multi_listener.rb:95:in `block in initialize_adapter'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/vendor/listen/lib/listen/adapters/polling.rb:55:in `call'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/vendor/listen/lib/listen/adapters/polling.rb:55:in `poll'
-/Users/markmcdonnell/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.1.17/vendor/listen/lib/listen/adapters/polling.rb:31:in `block in start'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$alert-color\".\A         on line 6 of /Users/markmcdonnell/Dropbox/Library/Ruby/Passage/public/Assets/Styles/Sass/Modules/_error.scss\A         from line 1 of public/Assets/Styles/Sass/Queries/_960-home.scss\A         from line 8 of public/Assets/Styles/Sass/IE.scss\A \A 1: /* =============================================================================\A 2:    The main stylesheet is loaded for all browsers (including IE)\A 3:    But because IE < 9 doesn't understand the media queries we're using to target \A 4:    specific devices and so we use conditional comments to load this stylesheet \A 5:    specifically for IE < 9, and we simply import the desktop styles.\A 6:    ========================================================================== */\A 7:    \A 8: @import \"Queries/960-home\";"; }
+body {
+  background-color: #526d7a;
+  color: white;
+}
+body .demo h1 {
+  color: #dd6262;
+}
+body a {
+  color: yellow;
+}

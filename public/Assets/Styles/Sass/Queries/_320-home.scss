@@ -4,10 +4,14 @@
 // Specific 320px styles
 
 body {
-    background-color: green;
+    background-color: hsl(90%, 20%, 30%);
+    
+    .demo {
+        color: white;
+    }
     
     a {
-        color: white;
+        color: pink;
     }
 }
 

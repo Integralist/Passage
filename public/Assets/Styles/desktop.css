@@ -1000,8 +1000,11 @@ body {
 }
 
 body {
-  background-color: blue;
+  background-color: #526d7a;
   color: white;
+}
+body .demo h1 {
+  color: #dd6262;
 }
 body a {
   color: yellow;

@@ -4,7 +4,15 @@
 // Specific 480px styles
 
 body {
-    background-color: yellow;
+    background-color: hsl(64%, 93%, 80%);
+    
+    .demo {
+        color: black;
+    }
+    
+    a {
+        color: blue;
+    }
 }
 
 .container {
