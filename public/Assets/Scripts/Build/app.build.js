@@ -15,19 +15,17 @@
  */
 ({	
     appDir: '../../../',
-    baseUrl: 'Assets/Scripts',
-    dir: '../../../project-build',
+    baseUrl: 'Assets/Scripts/App',
+    dir: '../../../../__project-build',
     /*
      * The below 'paths' object is useful for when using plugins/named module paths.
      * If you use plugins or named modules in your code then don't forget to specify the same paths again in your build script.
      * Otherwise your build script wont be able to find your plugins/named modules and will generate an error when building.
      */
     paths: {
-        async: 'Plugins/async',
-        jquery: 'Utils/jquery',
-        tpl: 'Plugins/tpl'
+        async: '../Plugins/async'
     },
-    optimize: 'none',
+    //optimize: 'none',
     modules: [
         {
             name: 'main'
