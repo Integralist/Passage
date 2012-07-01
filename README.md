@@ -15,13 +15,17 @@ For more information on building a site using Ruby and Sinatra then [read my blo
 
 ##Features
 
-* Object-Oriented CSS (with additional assistance from the [Sass](http://sass-lang.com/) CSS pre-processor)
-* Modular JavaScript (via AMD and [RequireJs](http://requirejs.org/))
-* Built to be modular (via use of ERB templates)
+* Object-Oriented CSS  
+(no framework provided - any CSS I've written will be object-oriented with additional assistance from the [Sass](http://sass-lang.com/) CSS pre-processor)
+* Modular JavaScript  
+(via AMD and [RequireJs](http://requirejs.org/))
+* Built to be modular  
+(via use of ERB templates)
 * Can load content from Markdown files
 * Performance conscientious
 * Mobile First approach
-* Useful utilities pre-packaged (well, only one `Rack::Utils`'s `escape` method but you have facility to add more)
+* Useful utilities pre-packaged  
+(well, only one `Rack::Utils`'s `escape` method - but you have facility to add more)
 
 ##Requirements
 
@@ -51,7 +55,7 @@ require 'app' # app being the name of your main file that initializes your web a
 run Sinatra::Application
 ```
 
-* Create a Gemfile file (no file extension) and add the content:
+* Create a `Gemfile` (no file extension) and add the content:
 
 ```
 source 'http://rubygems.org'
@@ -62,15 +66,15 @@ gem 'redcarpet', '2.1.1'
 
 Open Command Line Interface and enter: 
 
-	* `bundle install`
-	* Create a `Procfile` (no file extension) and add the content:  
+* `bundle install`
+* Create a `Procfile` (no file extension) and add the content:  
 	`web: bundle exec ruby app.rb -p $PORT`  
 	   
 	   e.g.  
 	   `touch Procfile`  
 	   `echo web: bundle exec ruby app.rb -p $PORT > Procfile`  
  
-    * Commit your files using Git ([for help with Git read this](https://github.com/Integralist/Blog-Posts/blob/master/How-to-use-Git-and-GitHub.md))
-    * If not already, create a `remote`: `git remote add heroku git@heroku.com:xxxxx.git`
-    * `git push heroku master`
-    * `heroku open` will open your default browser to the relevant URL
+* Commit your files using Git ([for help with Git read this](https://github.com/Integralist/Blog-Posts/blob/master/How-to-use-Git-and-GitHub.md))
+* If you haven't created a `remote` yet then do so now: `git remote add heroku git@heroku.com:xxxxx.git`
+* `git push heroku master`
+* `heroku open` will open your default browser to the relevant URL
