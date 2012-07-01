@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Passage by Integralist</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/Integralist/Passage">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/Integralist/Passage/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/Integralist/Passage/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Passage</h1>
+          <p>Ruby/Sinatra Project Template</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Integralist">Integralist</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>Passage</h1>
+
+<p>Live example: <a href="http://furious-wind-9309.herokuapp.com/">http://furious-wind-9309.herokuapp.com/</a><br>
+Hosting: <a href="http://www.heroku.com/">Heroku</a></p>
+
+<h2>Description</h2>
+
+<p>Since learning Ruby (along with the Sinatra framework) I wanted to set-up a template project that I could refer to whenever starting up a new web based Ruby project.</p>
+
+<p>The name "Passage" is an associated word related to "routing" (which in principle is what the Sinatra framework is most notorious for).</p>
+
+<p>For an introduction to Ruby then <a href="https://github.com/Integralist/Blog-Posts/blob/master/Introduction-to-Ruby.md">read my blog post here</a></p>
+
+<p>For more information on building a site using Ruby and Sinatra then <a href="https://github.com/Integralist/Blog-Posts/blob/master/Build%20a%20site%20with%20Ruby%20and%20Sinatra.md">read my blog post here</a></p>
+
+<h2>Features</h2>
+
+<ul>
+<li>Object-Oriented CSS<br>
+(no framework provided - any CSS I've written will be object-oriented with additional assistance from the <a href="http://sass-lang.com/">Sass</a> CSS pre-processor)</li>
+<li>Modular JavaScript<br>
+(via AMD and <a href="http://requirejs.org/">RequireJs</a>)</li>
+<li>Built to be modular<br>
+(via use of ERB templates)</li>
+<li>Can load content from Markdown files</li>
+<li>Performance conscientious</li>
+<li>Mobile First approach</li>
+<li>Useful utilities pre-packaged<br>
+(well, only one <code>Rack::Utils</code>'s <code>escape</code> method - but you have facility to add more)</li>
+</ul><h2>Requirements</h2>
+
+<ul>
+<li>Bundler (<code>gem install bundler</code>)</li>
+<li>Sinatra (<code>gem install sinatra</code>)</li>
+<li>Thin (<code>gem install thin</code>)</li>
+<li>Red Carpet (<code>gem install redcarpet</code>)</li>
+<li>Shotgun (<code>gem install shotgun</code> - for testing purposes: it reloads server on every request)</li>
+</ul><h2>TODO</h2>
+
+<ul>
+<li>Look to make loading of Markdown files more 'dynamic'</li>
+<li>Look at automatically building an XML site map</li>
+</ul><h2>Heroku Hosting</h2>
+
+<ul>
+<li>Set-up account (<a href="http://www.heroku.com/">heroku.com</a>)</li>
+<li>Install toolbelt (<a href="http://toolbelt.heroku.com/">toolbelt.heroku.com</a>)</li>
+<li>Open your Command Line Interface (e.g. Terminal on Mac OS) and enter:
+
+<ul>
+<li>
+<code>heroku login</code> (follow instructions)</li>
+<li>If you need add additional SSH keys then use: <code>heroku keys:add</code>
+</li>
+<li>
+<code>heroku create --stack cedar</code> (you can also do: <code>heroku create yourappname --stack cedar</code>)</li>
+</ul>
+</li>
+<li>Create a <code>config.ru</code> file and add the following content:</li>
+</ul><div class="highlight">
+<pre><span class="nb">require</span> <span class="s1">'app'</span> <span class="c1"># app being the name of your main file that initializes your web application</span>
+<span class="n">run</span> <span class="no">Sinatra</span><span class="o">::</span><span class="no">Application</span>
+</pre>
+</div>
+
+
+<ul>
+<li>Create a <code>Gemfile</code> (no file extension) and add the content:</li>
+</ul><pre><code>source 'http://rubygems.org'
+gem 'sinatra', '1.3.2'
+gem 'thin', '1.3.1'
+gem 'redcarpet', '2.1.1'
+</code></pre>
+
+<p>Open Command Line Interface and enter: </p>
+
+<ul>
+<li><code>bundle install</code></li>
+<li>
+<p>Create a <code>Procfile</code> (no file extension) and add the content:<br><code>web: bundle exec ruby app.rb -p $PORT</code>  </p>
+
+<p>e.g.<br><code>touch Procfile</code><br><code>echo web: bundle exec ruby app.rb -p $PORT &gt; Procfile</code>  </p>
+</li>
+<li><p>Commit your files using Git (<a href="https://github.com/Integralist/Blog-Posts/blob/master/How-to-use-Git-and-GitHub.md">for help with Git read this</a>)</p></li>
+<li><p>If you haven't created a <code>remote</code> yet then do so now: <code>git remote add heroku git@heroku.com:xxxxx.git</code></p></li>
+<li><p><code>git push heroku master</code></p></li>
+<li><p><code>heroku open</code> will open your default browser to the relevant URL</p></li>
+</ul>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
