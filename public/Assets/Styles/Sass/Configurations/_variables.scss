@@ -1,10 +1,14 @@
+/* =============================================================================
+   Configurable variables that will change depending on project
+   ========================================================================== */
+
+$base-font-size: 16px;
 $prefixes: -webkit, -moz, -ms, -o;
 
-// These are just examples, replace with your own
-$brand-color: #cccc00;
-$action-color: #67a54b;
-$function-color: #f2f2f2;
-$alert-color: #b22727;
+$brand-color: #CC0;  // GENERAL BRAND COLOUR
+$action-color: #67a54b; // BUTTONS
+$module-color: #f2f2f2; // COMPONENTS
+$alert-color: #b22727;  // WARNINGS & ALERTS
 
 // Now create different 'tones' for each brand colour
 $brand-color-light: lighten($brand-color, 10%);
@@ -12,6 +16,6 @@ $brand-color-lighter: lighten($brand-color, 20%);
 $brand-color-dark: darken($brand-color, 10%);
 $brand-color-darker: darken($brand-color, 20%);
 
-$site-max-width: 940px;
+$site-max-width: 60em; // 960px / 16px (this being the baseline font size)
 
 $space: 1em;

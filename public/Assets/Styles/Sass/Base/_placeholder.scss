@@ -1,0 +1,18 @@
+/* =============================================================================
+   Placeholder Polyfill
+   Used in conjunction with the /Scripts/Utils/Polyfills/placeholder.js script
+   
+   Makes it possible for an input to be one colour (to signify a 'hint')
+   but change to a different colour when the user focus' on the input.
+   ========================================================================== */
+
+.no-placeholder {
+    input[placeholder],
+    textarea[placeholder] { 
+        color: #999; 
+    }
+    
+    .has-content { 
+        color: #000 !important;
+    }
+}

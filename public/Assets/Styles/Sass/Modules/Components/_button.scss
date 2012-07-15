@@ -1,8 +1,63 @@
+/* =============================================================================
+   Button
+   Generic Web 2.0 style button design (inspired from Twitter Bootstrap)
+   ========================================================================== */
+   
 .btn {
-	$border-radius: 20px;
-	@each $prefix in $prefixes {
-        #{$prefix}-border-radius: $border-radius;
+    $btn-background: #3079ed;
+    $btn-border: darken($btn-background, 20%);
+    $btn-hover: darken($btn-background, 40%);
+    $btn-active: darken($btn-background, 20%);
+    $btn-color: #fff;
+    $btn-border-radius: 4px;
+    $btn-shadow: 1px 1px 10px 0 darken($btn-background, 20%) inset;
+    $btn-transition: border-color 0.2s linear;
+    $gradient-start: darken($btn-background, 2%);
+    $gradient-stop: lighten($btn-background, 2%);
+    
+    @each $prefix in $prefixes {
+        #{$prefix}-border-radius: $btn-border-radius;
     }
-    border-radius: $border-radius;
-    border: 1px solid #666;
+    border-radius: $btn-border-radius;
+    
+    background: $btn-background;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$gradient-start), color-stop(100%,$gradient-stop));
+    background: -moz-linear-gradient(center top, $gradient-start 0%, $gradient-stop 100%);
+    border: 1px solid $btn-border;
+    color: $btn-color;
+    cursor: default;
+    display: inline-block;
+    font-size: .75em; // 12px / 16px
+    font-weight: bold;
+    margin: 0px 12px 0px 0px;
+    padding: 7px 12px;
+    
+    @each $prefix in $prefixes {
+        #{$prefix}-transition: $btn-transition;
+    }
+    transition: $btn-transition;
+    
+    &:hover,
+    &:focus {
+        background: darken($btn-background, 5%);
+        border-color: $btn-hover;
+        
+        @each $prefix in $prefixes {
+            #{$prefix}-box-shadow: $btn-shadow;
+        }
+        box-shadow: $btn-shadow;
+    }
+    
+    &:active {
+        background: darken($btn-background, 10%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$gradient-start), color-stop(100%,$gradient-stop));
+        background: -moz-linear-gradient(center top, $gradient-start 0%, $gradient-stop 100%);
+        border-color: $btn-active;
+        text-shadow: 1px 1px 0px #001AA6;
+        
+        @each $prefix in $prefixes {
+            #{$prefix}-box-shadow: $btn-shadow;
+        }
+        box-shadow: $btn-shadow;
+    }
 }

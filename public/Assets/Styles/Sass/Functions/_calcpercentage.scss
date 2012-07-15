@@ -1,3 +1,16 @@
+/* =============================================================================
+   Returns the relevant width of an element as a percentage.
+   Useful for responsive designs.
+   
+   Explanation:
+   The premise is that you divide the 'target' width by the width of its 'container'.
+   You then move the decimal point over two places.
+   e.g. 140/960 = .145833333 which you want to use as 14.5833333%
+   
+   Example usage:
+   calc-percent(140, 960);
+   ========================================================================== */
+   
 @function calc-percent ($target, $container) {
     @return ($target / $container) * 100%;	
 }

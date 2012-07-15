@@ -1,3 +1,8 @@
+/* =============================================================================
+   Sets a border on the element
+   Allows setting of Width/Colour and specific edges
+   ========================================================================== */
+   
 @mixin border ($width, $colour, $settings: '') {
 	border: $width solid $colour;
 

@@ -1,5 +1,9 @@
+/* =============================================================================
+   Sets the border radius for the element
+   ========================================================================== */
+   
 @mixin radius ($radius) {
 	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	border-radius: $radius;
+	   -moz-border-radius: $radius;
+	        border-radius: $radius;
 }

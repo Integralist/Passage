@@ -1,5 +1,9 @@
+/* =============================================================================
+   Most common use case would be to set elements box-sizing to border-box
+   ========================================================================== */
+   
 @mixin box-sizing ($box-sizing) {
 	-webkit-box-sizing: $box-sizing;
-	-moz-box-sizing: $box-sizing;
-	box-sizing: $box-sizing;
+	   -moz-box-sizing: $box-sizing;
+	        box-sizing: $box-sizing;
 }

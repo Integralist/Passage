@@ -1,3 +1,16 @@
+/* =============================================================================
+   Returns the relevant font size for an element to ems.
+   Useful for responsive designs.
+   
+   Explanation:
+   The premise is that you divide the 'target' font size by the inherited font size of its 'container'.
+   You then specify the font size in 'ems'.
+   e.g. 11px / 16px = .6875em;
+   
+   Example usage:
+   font-size: font-sizing(11px);
+   ========================================================================== */
+
 @function font-sizing ($target) {
     @return ($target / $base-font-size) * 1em; // Had to multiply by one to stop a space between the sum and type.
 }

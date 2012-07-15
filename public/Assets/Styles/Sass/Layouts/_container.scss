@@ -1,11 +1,25 @@
-// Container Block
-// This is normally what we stick the main website content within
+/* =============================================================================
+   Container Block
+   This is normally what we place the main website content within (as a wrapper)
+   ========================================================================== */
 
 .container {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0 10px;
 	max-width: $site-max-width;
-	width: 90%;
+	position: relative;
+}
+
+/* =============================================================================
+   BUG?
+   This might be a bug, or we've mis-understood the cause of the problem.
+   Seems box-sizing:border-box doesn't work in IE8 when using 'max-width' instead of 'width'.
+   To work around this we're setting a 'width' (and resetting 'max-width') for IE8.
+   The alternative was - for IE8 - to set 'max width' but minus off padding (but that's just ridiculous).
+   ========================================================================== */
+
+.ie8 .container {
+    max-width: none;
+    width: $site-max-width;
 }

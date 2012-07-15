@@ -1,14 +1,15 @@
 // Configurations/Settings
 @import "Configurations/variables";
 
-// Base
-@import "Base/normalize";
-@import "Base/additions";
-@import "Base/theme";
-
 // Functions
 @import "Functions/calcpercentage";
 @import "Functions/fontsize";
+
+// Base
+@import "Base/normalize";
+@import "Base/additions";
+@import "Base/placeholder";
+@import "Base/theme";
 
 // Layouts
 @import "Layouts/grid";
@@ -18,6 +19,14 @@
 @import "Plugins/slimbox";
 
 // Modules
+    
+    // Mixins
+    @import "Modules/Mixins/border";
+    @import "Modules/Mixins/boxsizing";
+    @import "Modules/Mixins/radius";
+    @import "Modules/Mixins/shadow";
+    @import "Modules/Mixins/transform";
+    @import "Modules/Mixins/transition";
 
     // Components
     @import "Modules/Components/button";
@@ -28,14 +37,6 @@
     @import "Modules/Helpers/hidetxt";
     @import "Modules/Helpers/horizontal";
     @import "Modules/Helpers/push";
-    
-    // Mixins
-    @import "Modules/Mixins/border";
-    @import "Modules/Mixins/boxsizing";
-    @import "Modules/Mixins/radius";
-    @import "Modules/Mixins/shadow";
-    @import "Modules/Mixins/transform";
-    @import "Modules/Mixins/transition";
 
 // Desktop Specific Styles
 @import "Queries/960-home";
