@@ -22,8 +22,12 @@ $gridRowWidth: ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridCol
 
 // Fluid grid
 // -------------------------
-$fluidGridColumnWidth: 6.382978723% !default;
-$fluidGridGutterWidth: 2.127659574% !default;
+//$fluidGridColumnWidth: 6.382978723% !default;
+//$fluidGridGutterWidth: 2.127659574% !default;
+
+// I believe I managed to calculate the following column width value from the gridpak.com interface
+$fluidGridColumnWidth: 8.33333333333% !default; //7.14285714286
+$fluidGridGutterWidth: 0% !default;
 
 @mixin clearfix {
     *zoom: 1;
