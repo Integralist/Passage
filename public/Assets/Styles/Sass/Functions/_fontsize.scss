@@ -9,8 +9,9 @@
    
    Example usage:
    font-size: font-sizing(11px);
+   font-size: font-sizing(11px, 24px); // if you find the context has changed
    ========================================================================== */
 
-@function font-sizing ($target) {
-    @return ($target / $base-font-size) * 1em; // Had to multiply by one to stop a space between the sum and type.
+@function font-sizing ($target, $context: $base-font-size) {
+    @return ($target / $context) * 1em; // Had to multiply by one to stop a space between the sum and type.
 }
