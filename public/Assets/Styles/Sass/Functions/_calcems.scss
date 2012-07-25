@@ -1,0 +1,17 @@
+/* =============================================================================
+   Returns the relevant pixel amount in ems.
+   Useful for responsive designs and specifically locations where the 'calc-percent' can't be used (because container width is unknown)
+   http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/#baseline-expectations
+   
+   Explanation:
+   The premise is that you divide the 'target' amount (in pixels) by the standard font size of the browser (16px).
+   You then specify the return value to be 'ems'.
+   e.g. 95px / 16 = 5.9375em;
+   
+   Example usage:
+   padding-right: calc-ems(95);
+   ========================================================================== */
+
+@function calc-ems ($target) {
+    @return ($target / $base-font-size-nounit) * 1em; // Had to multiply by one to stop a space between the sum and type
+}
